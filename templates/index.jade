@@ -1,0 +1,25 @@
+doctype 5
+html(ng-app='app')
+  head
+    title Scan-Interface
+    each js in ['frameworks/jquery-2.0.3.min.js', 'frameworks/angular.min.js', 'frameworks/jquery.fileDownload.js', 'frameworks/jquery.activity-indicator-1.0.0.min.js', 'controllers/main.js']
+      script(type='text/javascript', src='#{js}')
+    link(rel='stylesheet', type='text/less', href='style/style.less')
+    script(type='text/javascript', src='frameworks/less-1.3.3.min.js')
+  body(ng-controller='main')
+    div#overlay(ng-show='scanning')
+      div#indicator
+      span Scanning…
+    img#image
+    div.options
+      ul
+        li
+          span.label Resolution
+          select#resolution(ng-model='resolution', ng-options='value for value in resolutions')
+        li
+          span.label Mode
+          select#mode(ng-model='mode', ng-options='value for value in modes')
+        li
+          button(ng-click='preview();') Preview
+          button(ng-click='scan();') Scan
+      

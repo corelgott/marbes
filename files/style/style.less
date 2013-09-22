@@ -1,0 +1,53 @@
+html {
+  height: 100%;
+}
+
+.box() {
+  position: absolute;
+  border-radius: 15px;
+  box-shadow: #000 0 0 60px;
+}
+
+body {
+  font-family: Arial, Verdana; 
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url(../imgs/back.jpg);
+  text-align: center;
+  
+  #image {
+    height: 95%;
+    margin: 10px auto 0 auto;    
+  }
+  
+  div#overlay {
+    .box();
+    background-color: rgba(255, 255, 255, 0.5);    
+    width: 350px;
+    margin: auto;
+    margin-top: 10%;
+    z-index: 99;
+    left: 37%;
+    height: 60px;
+    padding: 25px 0;
+    #indicator {
+      display: block;
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 10px auto;
+    }
+  }
+  
+  div.options {
+    .box();
+    background-color: white;
+    text-align: left;
+    top : 25px;
+    right: 20px;
+    bottom: 25px;
+    width:15%;
+    
+    float: right;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "port"              : 8080,
+	"modes"             : ["Lineart", "Gray", "Color"],
+	"defaultMode"       : "Color",
+	"resolutions"       : [75, 150, 300, 600, 1200, 2400],
+	"deviceId"          : "pixma:xxxxx_xxxxx",
+	"defaultResolution" : 150
+}

@@ -20,6 +20,8 @@ html(ng-app='app')
           span.label Mode
           select#mode(ng-model='mode', ng-options='value for value in modes')
         li
-          button(ng-click='preview();') Preview
-          button(ng-click='scan();') Scan
+          button(ng-click='preview();', ng-disabled="!ready") Preview
+        li
+          button(ng-click='scan();', ng-disabled="!ready") Scan
+          button(ng-click='scanToPdf();', ng-disabled="!ready") Scan to pdf
       

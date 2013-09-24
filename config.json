@@ -1,5 +1,0 @@
-{
-  'port'        : 8080,
-	'modes'       : ['Lineart', 'Gray', 'Color'],
-	'resolutions' : [75, 150, 300, 600]
-}

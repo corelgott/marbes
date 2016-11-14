@@ -127,7 +127,7 @@ app.get('/scanToPdf', function(req, resp){
     });
   } else {
     var command = "convert -format pdf ./tmp/*.jpg ./tmp/out.pdf";
-    resp.setHeader('Content-Disposition:', 'attachment; filename="scan.pdf"');
+    resp.setHeader('Content-Disposition', 'attachment; filename="scan.pdf"');
     resp.setHeader('Content-Type', 'application/octet-stream');
     resp.setHeader('Set-Cookie', 'fileDownload=true; path=/scan.pdf');
     count = 0;
@@ -148,7 +148,7 @@ app.get('/scan', function(req, resp) {
   console.log('mode:' + mode);
   
 	// we are returning an image
-  resp.setHeader('Content-Disposition:', 'attachment; filename="scan.jpg"');
+  resp.setHeader('Content-Disposition', 'attachment; filename="scan.jpg"');
   resp.setHeader('Content-Type', 'application/octet-stream');
   resp.setHeader('Set-Cookie', 'fileDownload=true; path=/scan.jpg');
 
